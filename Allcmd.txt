@@ -1,0 +1,26 @@
+1.
+Create: gedit prg1.c
+Compile: gcc -fopenmp prg1.c -o prg1
+Run: export OMP_NUM_THREADS=4 && ./prg1
+
+2.
+Create: gedit prg2.c
+Compile: gcc -fopenmp prg2.c -o prg2
+Run: export OMP_NUM_THREADS=4 && ./prg2
+
+3.
+Create: gedit prg3.c
+Compile: gcc -fopenmp prg3.c -o prg3
+Run: export OMP_NUM_THREADS=4 && ./prg3
+
+4 * 
+
+5.
+Create: gedit prg5.c
+Compile: mpicc prg5.c -o prg5 OR mpirun --oversubscribe -np 2 ./prg5
+Run: mpirun -np 2 ./prg5
+
+6.
+Create: gedit prg6.c
+Compile: mpicc prg6.c -o prg6
+Run: mpirun -np 2 ./prg6
