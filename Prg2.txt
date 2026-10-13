@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <omp.h>
+int main(){
+ int n;
+ printf("Enter number of iterations: ");
+ scanf("%d",&n);
+ int t[n];
+ #pragma omp parallel for schedule(static,2)
+ for(int i=0;i<n;i++) 
+t[i]=omp_get_thread_num();
+ for(int i=0;i<n;i+=2)
+ printf("Thread %d : Iterations %d -- %d\n",t[i],i,i+1<n?i+1:i);
+}
